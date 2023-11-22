@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragments">
+
+    <fragment
+        android:id="@+id/dashboardFragments"
+        android:name="com.example.myapplication.fragments.DashboardFragments"
+        tools:layout="@layout/dashboard_fragment"
+        android:label="DashboardFragments" >
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/notificationFragments"
+        android:name="com.example.myapplication.fragments.NotificationFragments"
+        tools:layout="@layout/notification_fragment"
+        android:label="NotificationFragments" />
+
+    <fragment
+        android:id="@+id/homeFragments"
+        android:name="com.example.myapplication.fragments.HomeFragments"
+        tools:layout="@layout/home_fragment"
+        android:label="HomeFragments" >
+        <action
+            android:id="@+id/action_homeFragments_to_dashboardFragments"
+            app:destination="@id/dashboardFragments"
+            app:enterAnim="@android:anim/accelerate_decelerate_interpolator"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/searchFragments"
+        android:name="com.example.myapplication.fragments.SearchFragments"
+        tools:layout="@layout/search_fragment"
+        android:label="SearchFragments" />
+
+
+</navigation>
